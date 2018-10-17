@@ -10,3 +10,13 @@
 
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
+
+# vim files
+*.swo
+*.swp
+#
+# # silly mac files
+*.DS_Store
+
+# don't commit yer node deps
+node_modules

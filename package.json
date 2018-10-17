@@ -1,0 +1,33 @@
+{
+  "name": "solperf",
+  "version": "0.1.0",
+  "description": "Solidity cost/performance comparisons via geth and abigen test cases",
+  "main": "index.js",
+  "scripts": {
+    "test": "go test -v ./...",
+    "lint:solium": "node_modules/.bin/solium -d cases",
+    "compile:MappingPlusMapping": "~/go/bin/abigen -sol cases/mapping/iteration/MappingPlusMapping.sol -pkg mappingplusmapping -out cases/mapping/iteration/mappingplusmapping/mappingplusmapping.go"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/computablelabs/solperf.git"
+  },
+  "keywords": [
+    "Solidity",
+    "Go",
+    "Performance",
+    "Gas",
+    "abigen",
+    "wtf",
+    "oh-god-please-help-me"
+  ],
+  "author": "computable.io and friends",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/computablelabs/solperf/issues"
+  },
+  "homepage": "https://github.com/computablelabs/solperf#readme",
+  "devDependencies": {
+    "solium": "^1.1.8"
+  }
+}
