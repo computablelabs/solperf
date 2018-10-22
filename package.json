@@ -6,7 +6,8 @@
   "scripts": {
     "test": "go test -v ./...",
     "lint:solium": "node_modules/.bin/solium -d cases",
-    "compile:MappingPlusMapping": "~/go/bin/abigen -sol cases/mapping/iteration/MappingPlusMapping.sol -pkg mappingplusmapping -out cases/mapping/iteration/mappingplusmapping/mappingplusmapping.go"
+    "compile:MappingPlusMapping": "~/go/bin/abigen -sol cases/mapping/iteration/kookooroos/MappingPlusMapping.sol -pkg mappingplusmapping -out cases/mapping/iteration/kookooroos/mappingplusmapping/mappingplusmapping.go",
+    "compile:ArrayOfStructs": "~/go/bin/abigen -sol cases/array/iteration/kookooroos/ArrayOfStructs.sol -pkg arrayofstructs -out cases/array/iteration/kookooroos/arrayofstructs/arrayofstructs.go"
   },
   "repository": {
     "type": "git",

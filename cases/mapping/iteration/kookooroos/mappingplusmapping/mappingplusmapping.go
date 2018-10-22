@@ -14,10 +14,10 @@ import (
 )
 
 // MappingPlusMappingABI is the input ABI used to generate the binding from.
-const MappingPlusMappingABI = "[{\"constant\":true,\"inputs\":[],\"name\":\"MAX_KOO_KOO_ROOS\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"candidate\",\"type\":\"address\"}],\"name\":\"isKooKooRooOwner\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"address\"}],\"name\":\"kooKooRooOwners\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"location\",\"type\":\"string\"}],\"name\":\"becomeOwner\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"bytes32\"}],\"name\":\"kooKooRoos\",\"outputs\":[{\"name\":\"owner\",\"type\":\"address\"},{\"name\":\"listed\",\"type\":\"uint256\"},{\"name\":\"location\",\"type\":\"string\"},{\"name\":\"generalManager\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}]"
+const MappingPlusMappingABI = "[{\"constant\":true,\"inputs\":[],\"name\":\"MAX_KOO_KOO_ROOS\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"candidate\",\"type\":\"address\"}],\"name\":\"isKooKooRooOwner\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"address\"}],\"name\":\"kooKooRooOwners\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"location\",\"type\":\"string\"}],\"name\":\"becomeOwner\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"src\",\"type\":\"string\"}],\"name\":\"stringToBytes32\",\"outputs\":[{\"name\":\"result\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"pure\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"bytes32\"}],\"name\":\"kooKooRoos\",\"outputs\":[{\"name\":\"owner\",\"type\":\"address\"},{\"name\":\"listed\",\"type\":\"uint256\"},{\"name\":\"generalManager\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}]"
 
 // MappingPlusMappingBin is the compiled bytecode used for deploying new contracts.
-const MappingPlusMappingBin = `0x6080604052601460005534801561001557600080fd5b50610696806100256000396000f30060806040526004361061006c5763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663111bf23b811461007157806330b815571461009857806367cadd26146100da57806375490a8514610108578063ee989cd114610128575b600080fd5b34801561007d57600080fd5b50610086610258565b60408051918252519081900360200190f35b3480156100a457600080fd5b506100c673ffffffffffffffffffffffffffffffffffffffff6004351661025e565b604080519115158252519081900360200190f35b3480156100e657600080fd5b5061008673ffffffffffffffffffffffffffffffffffffffff60043516610287565b34801561011457600080fd5b506100c66004803560248101910135610299565b34801561013457600080fd5b506101406004356103dc565b604051808573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018481526020018060200180602001838103835285818151815260200191508051906020019080838360005b838110156101b95781810151838201526020016101a1565b50505050905090810190601f1680156101e65780820380516001836020036101000a031916815260200191505b50838103825284518152845160209182019186019080838360005b83811015610219578181015183820152602001610201565b50505050905090810190601f1680156102465780820380516001836020036101000a031916815260200191505b50965050505050505060405180910390f35b60005481565b73ffffffffffffffffffffffffffffffffffffffff166000908152600260205260408120541190565b60026020526000908152604090205481565b6000805433825260026020526040822054829182911061034057604080517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152602960248201527f4572726f723a204f6e6c79204469646479206d6179206f776e203231204b6f6f60448201527f204b6f6f20526f6f730000000000000000000000000000000000000000000000606482015290519081900360840190fd5b33600090815260026020908152604091829020805460010190558151601f870182900482028101820190925285825261038e919087908790819084018382808284375061052c945050505050565b6000818152600160205260409020805473ffffffffffffffffffffffffffffffffffffffff19163317815590925090506103cc6002820186866105cf565b5042600191820155949350505050565b6001602081815260009283526040928390208054818401546002808401805488516101009882161598909802600019011691909104601f810186900486028701860190975286865273ffffffffffffffffffffffffffffffffffffffff90921695909492938301828280156104925780601f1061046757610100808354040283529160200191610492565b820191906000526020600020905b81548152906001019060200180831161047557829003601f168201915b5050505060038301805460408051602060026001851615610100026000190190941693909304601f81018490048402820184019092528181529495949350908301828280156105225780601f106104f757610100808354040283529160200191610522565b820191906000526020600020905b81548152906001019060200180831161050557829003601f168201915b5050505050905084565b600060208251111515156105c757604080517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152602d60248201527f4572726f723a204c6f636174696f6e206d75737420626520333220636861726160448201527f6374657273206f72206c65737300000000000000000000000000000000000000606482015290519081900360840190fd5b506020015190565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106106105782800160ff1982351617855561063d565b8280016001018555821561063d579182015b8281111561063d578235825591602001919060010190610622565b5061064992915061064d565b5090565b61066791905b808211156106495760008155600101610653565b905600a165627a7a72305820b9f5af4f87e88bf70bd967f41a567796f678462c64340545f9b2f4697a63de5e0029`
+const MappingPlusMappingBin = `0x6080604052601460005534801561001557600080fd5b50610557806100256000396000f3006080604052600436106100775763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663111bf23b811461007c57806330b81557146100a357806367cadd26146100e557806375490a8514610113578063cfb5192814610133578063ee989cd11461018c575b600080fd5b34801561008857600080fd5b50610091610256565b60408051918252519081900360200190f35b3480156100af57600080fd5b506100d173ffffffffffffffffffffffffffffffffffffffff6004351661025c565b604080519115158252519081900360200190f35b3480156100f157600080fd5b5061009173ffffffffffffffffffffffffffffffffffffffff60043516610285565b34801561011f57600080fd5b506100d16004803560248101910135610297565b34801561013f57600080fd5b506040805160206004803580820135601f81018490048402850184019095528484526100919436949293602493928401919081908401838280828437509497506103c89650505050505050565b34801561019857600080fd5b506101a460043561046b565b604051808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200183815260200180602001828103825283818151815260200191508051906020019080838360005b83811015610219578181015183820152602001610201565b50505050905090810190601f1680156102465780820380516001836020036101000a031916815260200191505b5094505050505060405180910390f35b60005481565b73ffffffffffffffffffffffffffffffffffffffff166000908152600260205260408120541190565b60026020526000908152604090205481565b6000805433825260026020526040822054829182911061033e57604080517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152602960248201527f4572726f723a204f6e6c79204469646479206d6179206f776e203231204b6f6f60448201527f204b6f6f20526f6f730000000000000000000000000000000000000000000000606482015290519081900360840190fd5b33600090815260026020908152604091829020805460010190558151601f870182900482028101820190925285825261038c91908790879081908401838280828437506103c8945050505050565b6000908152600160208190526040909120805473ffffffffffffffffffffffffffffffffffffffff191633178155429082015595945050505050565b6000602082511115151561046357604080517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152602d60248201527f4572726f723a204c6f636174696f6e206d75737420626520333220636861726160448201527f6374657273206f72206c65737300000000000000000000000000000000000000606482015290519081900360840190fd5b506020015190565b6001602081815260009283526040928390208054818401546002808401805488516101009882161598909802600019011691909104601f810186900486028701860190975286865273ffffffffffffffffffffffffffffffffffffffff90921695909492938301828280156105215780601f106104f657610100808354040283529160200191610521565b820191906000526020600020905b81548152906001019060200180831161050457829003601f168201915b50505050509050835600a165627a7a72305820aa1cc80cad94983bb2649c3c6473240f970d1dc37eacee5cab3a929fc1d06aca0029`
 
 // DeployMappingPlusMapping deploys a new Ethereum contract, binding an instance of MappingPlusMapping to it.
 func DeployMappingPlusMapping(auth *bind.TransactOpts, backend bind.ContractBackend) (common.Address, *types.Transaction, *MappingPlusMapping, error) {
@@ -200,6 +200,32 @@ func (_MappingPlusMapping *MappingPlusMappingCallerSession) MAXKOOKOOROOS() (*bi
 	return _MappingPlusMapping.Contract.MAXKOOKOOROOS(&_MappingPlusMapping.CallOpts)
 }
 
+// IsKooKooRooOwner is a free data retrieval call binding the contract method 0x30b81557.
+//
+// Solidity: function isKooKooRooOwner(candidate address) constant returns(bool)
+func (_MappingPlusMapping *MappingPlusMappingCaller) IsKooKooRooOwner(opts *bind.CallOpts, candidate common.Address) (bool, error) {
+	var (
+		ret0 = new(bool)
+	)
+	out := ret0
+	err := _MappingPlusMapping.contract.Call(opts, out, "isKooKooRooOwner", candidate)
+	return *ret0, err
+}
+
+// IsKooKooRooOwner is a free data retrieval call binding the contract method 0x30b81557.
+//
+// Solidity: function isKooKooRooOwner(candidate address) constant returns(bool)
+func (_MappingPlusMapping *MappingPlusMappingSession) IsKooKooRooOwner(candidate common.Address) (bool, error) {
+	return _MappingPlusMapping.Contract.IsKooKooRooOwner(&_MappingPlusMapping.CallOpts, candidate)
+}
+
+// IsKooKooRooOwner is a free data retrieval call binding the contract method 0x30b81557.
+//
+// Solidity: function isKooKooRooOwner(candidate address) constant returns(bool)
+func (_MappingPlusMapping *MappingPlusMappingCallerSession) IsKooKooRooOwner(candidate common.Address) (bool, error) {
+	return _MappingPlusMapping.Contract.IsKooKooRooOwner(&_MappingPlusMapping.CallOpts, candidate)
+}
+
 // KooKooRooOwners is a free data retrieval call binding the contract method 0x67cadd26.
 //
 // Solidity: function kooKooRooOwners( address) constant returns(uint256)
@@ -228,17 +254,15 @@ func (_MappingPlusMapping *MappingPlusMappingCallerSession) KooKooRooOwners(arg0
 
 // KooKooRoos is a free data retrieval call binding the contract method 0xee989cd1.
 //
-// Solidity: function kooKooRoos( bytes32) constant returns(owner address, listed uint256, location string, generalManager string)
+// Solidity: function kooKooRoos( bytes32) constant returns(owner address, listed uint256, generalManager string)
 func (_MappingPlusMapping *MappingPlusMappingCaller) KooKooRoos(opts *bind.CallOpts, arg0 [32]byte) (struct {
 	Owner          common.Address
 	Listed         *big.Int
-	Location       string
 	GeneralManager string
 }, error) {
 	ret := new(struct {
 		Owner          common.Address
 		Listed         *big.Int
-		Location       string
 		GeneralManager string
 	})
 	out := ret
@@ -248,11 +272,10 @@ func (_MappingPlusMapping *MappingPlusMappingCaller) KooKooRoos(opts *bind.CallO
 
 // KooKooRoos is a free data retrieval call binding the contract method 0xee989cd1.
 //
-// Solidity: function kooKooRoos( bytes32) constant returns(owner address, listed uint256, location string, generalManager string)
+// Solidity: function kooKooRoos( bytes32) constant returns(owner address, listed uint256, generalManager string)
 func (_MappingPlusMapping *MappingPlusMappingSession) KooKooRoos(arg0 [32]byte) (struct {
 	Owner          common.Address
 	Listed         *big.Int
-	Location       string
 	GeneralManager string
 }, error) {
 	return _MappingPlusMapping.Contract.KooKooRoos(&_MappingPlusMapping.CallOpts, arg0)
@@ -260,14 +283,39 @@ func (_MappingPlusMapping *MappingPlusMappingSession) KooKooRoos(arg0 [32]byte) 
 
 // KooKooRoos is a free data retrieval call binding the contract method 0xee989cd1.
 //
-// Solidity: function kooKooRoos( bytes32) constant returns(owner address, listed uint256, location string, generalManager string)
+// Solidity: function kooKooRoos( bytes32) constant returns(owner address, listed uint256, generalManager string)
 func (_MappingPlusMapping *MappingPlusMappingCallerSession) KooKooRoos(arg0 [32]byte) (struct {
 	Owner          common.Address
 	Listed         *big.Int
-	Location       string
 	GeneralManager string
 }, error) {
 	return _MappingPlusMapping.Contract.KooKooRoos(&_MappingPlusMapping.CallOpts, arg0)
+}
+
+// StringToBytes32 is a free data retrieval call binding the contract method 0xcfb51928.
+//
+// Solidity: function stringToBytes32(src string) constant returns(result bytes32)
+func (_MappingPlusMapping *MappingPlusMappingCaller) StringToBytes32(opts *bind.CallOpts, src string) ([32]byte, error) {
+	var (
+		ret0 = new([32]byte)
+	)
+	out := ret0
+	err := _MappingPlusMapping.contract.Call(opts, out, "stringToBytes32", src)
+	return *ret0, err
+}
+
+// StringToBytes32 is a free data retrieval call binding the contract method 0xcfb51928.
+//
+// Solidity: function stringToBytes32(src string) constant returns(result bytes32)
+func (_MappingPlusMapping *MappingPlusMappingSession) StringToBytes32(src string) ([32]byte, error) {
+	return _MappingPlusMapping.Contract.StringToBytes32(&_MappingPlusMapping.CallOpts, src)
+}
+
+// StringToBytes32 is a free data retrieval call binding the contract method 0xcfb51928.
+//
+// Solidity: function stringToBytes32(src string) constant returns(result bytes32)
+func (_MappingPlusMapping *MappingPlusMappingCallerSession) StringToBytes32(src string) ([32]byte, error) {
+	return _MappingPlusMapping.Contract.StringToBytes32(&_MappingPlusMapping.CallOpts, src)
 }
 
 // BecomeOwner is a paid mutator transaction binding the contract method 0x75490a85.
@@ -289,25 +337,4 @@ func (_MappingPlusMapping *MappingPlusMappingSession) BecomeOwner(location strin
 // Solidity: function becomeOwner(location string) returns(bool)
 func (_MappingPlusMapping *MappingPlusMappingTransactorSession) BecomeOwner(location string) (*types.Transaction, error) {
 	return _MappingPlusMapping.Contract.BecomeOwner(&_MappingPlusMapping.TransactOpts, location)
-}
-
-// IsKooKooRooOwner is a paid mutator transaction binding the contract method 0x30b81557.
-//
-// Solidity: function isKooKooRooOwner(candidate address) returns(bool)
-func (_MappingPlusMapping *MappingPlusMappingTransactor) IsKooKooRooOwner(opts *bind.TransactOpts, candidate common.Address) (*types.Transaction, error) {
-	return _MappingPlusMapping.contract.Transact(opts, "isKooKooRooOwner", candidate)
-}
-
-// IsKooKooRooOwner is a paid mutator transaction binding the contract method 0x30b81557.
-//
-// Solidity: function isKooKooRooOwner(candidate address) returns(bool)
-func (_MappingPlusMapping *MappingPlusMappingSession) IsKooKooRooOwner(candidate common.Address) (*types.Transaction, error) {
-	return _MappingPlusMapping.Contract.IsKooKooRooOwner(&_MappingPlusMapping.TransactOpts, candidate)
-}
-
-// IsKooKooRooOwner is a paid mutator transaction binding the contract method 0x30b81557.
-//
-// Solidity: function isKooKooRooOwner(candidate address) returns(bool)
-func (_MappingPlusMapping *MappingPlusMappingTransactorSession) IsKooKooRooOwner(candidate common.Address) (*types.Transaction, error) {
-	return _MappingPlusMapping.Contract.IsKooKooRooOwner(&_MappingPlusMapping.TransactOpts, candidate)
 }

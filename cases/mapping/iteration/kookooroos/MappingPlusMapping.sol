@@ -29,7 +29,6 @@ contract MappingPlusMapping {
     address owner;
     // none of these others really matter, but in any actual struct there'll be other stuff...
     uint listed; // maybe a timestamp of when we listed the location
-    string location; // where it was. We'll hash this for the mapping key
     string generalManager; // some random field that we can set separately if we want, maybe check updating with...
   }
 
@@ -48,11 +47,11 @@ contract MappingPlusMapping {
     // if not in violation, via modifier, add as an owner (using the fact that a non existant owner entry will be 0)
     kooKooRooOwners[msg.sender] = kooKooRooOwners[msg.sender] + 1;
     // create the ownable koo koo roo, use the converted location as the key
+    // NOTE: as "already known", string literals cost much more to store, TODO could be a separate test?
     bytes32 converted = stringToBytes32(location);
     KooKooRoo storage kookooroo = kooKooRoos[converted];
     // set the misc data
     kookooroo.owner = msg.sender;
-    kookooroo.location = location;
     kookooroo.listed = now;
     return true;
   }
@@ -62,14 +61,15 @@ contract MappingPlusMapping {
     _;
   }
 
-  function isKooKooRooOwner(address candidate) external returns (bool) {
+  function isKooKooRooOwner(address candidate) external view returns (bool) {
     return kooKooRooOwners[candidate] > 0;
   }
 
-  function stringToBytes32(string src) private returns (bytes32 result) {
+  // public as we will allow specs to create the same mapping key by calling it
+  function stringToBytes32(string src) public pure returns (bytes32 result) {
     // for this example we'll enforce that the location string can't be longer than 32 chars, obv in a prod env you'd just shorten the string here...
     require(bytes(src).length <= 32, "Error: Location must be 32 characters or less");
-
+    // sorry, solium, there's just no other way to do this atm
     assembly {
       result := mload(add(src, 32))
     }
